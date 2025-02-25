@@ -1,0 +1,69 @@
+CREATE SCHEMA `surveyapp` ;
+
+
+CREATE TABLE `surveyapp`.`employee` (
+  `idemployee` INT NOT NULL,
+  `employeeName` VARCHAR(45) NULL,
+  `employeeContactNumber` VARCHAR(45) NULL,
+  `employeeUserName` VARCHAR(45) NULL,
+  `employeePassword` VARCHAR(45) NULL,
+  PRIMARY KEY (`idemployee`));
+
+
+
+  CREATE TABLE `surveyapp`.`userdetails` (
+  `id` INT NOT NULL,
+  `aadharCard` INT NULL,
+  `address` VARCHAR(45) BINARY NULL,
+  `balconyCorridorDimensions` DECIMAL NULL,
+  `buildingAddress` VARCHAR(45) NULL,
+  `buildingConstructionType` VARCHAR(45) NOT NULL,
+  `capturedImages` LONGTEXT NULL,
+  `carpetArea1` DECIMAL NULL,
+  `carpetArea2` DECIMAL NULL,
+  `coveredArea` DECIMAL NULL,
+  `email` VARCHAR(45) NULL,
+  `fatherHusbandName` VARCHAR(45) NULL,
+  `fullName` VARCHAR(45) NULL,
+  `garageDimensions` DECIMAL NULL,
+  `landLocation` VARCHAR(45) NULL,
+  `latitude` DECIMAL NULL,
+  `locationBuildingLand` VARCHAR(45) NULL,
+  `longitude` DECIMAL NULL,
+  `mobileNo` INT NULL,
+  `openLandArea` DECIMAL NULL,
+  `ownerName` VARCHAR(45) NULL,
+  `pinCode` INT NULL,
+  `propertyType` VARCHAR(45) NULL,
+  `residenceAddress` VARCHAR(45) NULL,
+  `roomDimensions` DECIMAL NULL,
+  `createdby` VARCHAR(45) NULL,
+  `createat` DATETIME NULL,
+  PRIMARY KEY (`id`, `buildingConstructionType`));
+
+
+  ALTER TABLE `surveyapp`.`userdetails` 
+CHANGE COLUMN `mobileNo` `mobileNo` VARCHAR(45) NULL DEFAULT NULL ;
+
+
+
+ALTER TABLE `surveyapp`.`userdetails` 
+CHANGE COLUMN `aadharCard` `aadharCard` VARCHAR(120) NULL DEFAULT NULL ,
+CHANGE COLUMN `address` `address` VARCHAR(500) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_bin' NULL DEFAULT NULL ,
+CHANGE COLUMN `balconyCorridorDimensions` `balconyCorridorDimensions` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `carpetArea1` `carpetArea1` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `carpetArea2` `carpetArea2` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `coveredArea` `coveredArea` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `garageDimensions` `garageDimensions` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `latitude` `latitude` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `longitude` `longitude` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `openLandArea` `openLandArea` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `roomDimensions` `roomDimensions` VARCHAR(45) NULL DEFAULT NULL ;
+
+ALTER TABLE `surveyapp`.`userdetails` 
+
+
+ALTER TABLE `surveyapp`.`userdetails` 
+CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
+
+
